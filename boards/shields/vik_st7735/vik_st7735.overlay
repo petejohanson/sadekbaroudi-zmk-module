@@ -13,14 +13,15 @@
 &vik_spi {
 	status = "okay";
 
-	cs-gpios = <&vik_conn 0 GPIO_ACTIVE_LOW>;
+	cs-gpios = <&vik_conn 6 GPIO_ACTIVE_LOW>;
 
 	st7735r: st7735r@0 {
 		compatible = "sitronix,st7735r";
 		spi-max-frequency = <20000000>;
 		reg = <0>;
-		cmd-data-gpios = <&vik_conn 1 GPIO_ACTIVE_LOW>;	/* D9 */
-		reset-gpios = <&vik_conn 2 GPIO_ACTIVE_LOW>;	/* D8 */
+		cmd-data-gpios = <&vik_conn 3 GPIO_ACTIVE_LOW>;	/* D9 */
+		// TODO: Current driver requires this. Make it optional.
+		reset-gpios = <&vik_conn 0 GPIO_ACTIVE_LOW>;	/* D8 */
 		width = <160>;
 		height = <128>;
 		x-offset = <0>;
