@@ -20,7 +20,8 @@
 		spi-max-frequency = <20000000>;
 		reg = <0>;
 		cmd-data-gpios = <&vik_conn 3 GPIO_ACTIVE_HIGH>;
-		reset-gpios = <&vik_conn 0 GPIO_ACTIVE_HIGH>;
+		// Enable for testing, real VIK breakout uses a reset circuit
+		// reset-gpios = <&vik_conn 0 GPIO_ACTIVE_HIGH>;
 		backlight-gpios = <&vik_conn 5 GPIO_ACTIVE_LOW>;
 		width = <128>;
 		height = <160>;
