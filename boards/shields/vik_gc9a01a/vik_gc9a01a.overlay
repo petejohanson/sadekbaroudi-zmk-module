@@ -1,0 +1,28 @@
+/*
+ * Copyright (c) 2023 Pete Johanson
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+/ {
+	chosen {
+		zephyr,display = &gc9a01a;
+	};
+};
+
+&vik_spi {
+	status = "okay";
+
+	cs-gpios = <&vik_conn 6 GPIO_ACTIVE_LOW>;
+
+	gc9a01a: gc9a01a@0 {
+		compatible = "waveshare,gc9a01a";
+		spi-max-frequency = <20000000>;
+		reg = <0>;
+		cmd-data-gpios = <&vik_conn 3 GPIO_ACTIVE_HIGH>;
+		reset-gpios = <&vik_conn 0 GPIO_ACTIVE_HIGH>;
+		backlight-gpios = <&vik_conn 5 GPIO_ACTIVE_LOW>;
+		width = <128>;
+		height = <160>;
+	};
+};

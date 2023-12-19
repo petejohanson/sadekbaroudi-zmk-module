@@ -1,0 +1,6 @@
+# Copyright (c) 2023 Pete Johanson
+# SPDX-License-Identifier: Apache-2.0
+
+config SHIELD_VIK_ST7735
+	def_bool $(shields_list_contains,vik_st7735)
+	imply ZMK_DISPLAY

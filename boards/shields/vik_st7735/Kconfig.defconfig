@@ -1,0 +1,17 @@
+# Copyright (c) 2019 Linaro Limited
+# SPDX-License-Identifier: Apache-2.0
+
+if SHIELD_VIK_ST7735
+
+if DISPLAY
+
+if LVGL
+
+config LV_Z_BITS_PER_PIXEL
+	default 16
+
+endif # LVGL
+
+endif # DISPLAY
+
+endif # SHIELD_VIK_ST7735

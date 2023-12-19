@@ -1,0 +1,9 @@
+# Copyright (c) 2023 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+if SHIELD_SADEKBAROUDI_FFKB_LITE
+
+config ZMK_KEYBOARD_NAME
+    default "FFKB Lite"
+
+endif
